@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Wallet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- მთავარი გვერდი -->
+    <div class="main-page-wrapper" id="main-page">
+      <h2 class="avatarwrapper">
+        <img class="avatar" src="./avatar.jpg" alt="" />
+      </h2>
+      <div class="balance-box">
+        <h1 id="balance">1,154,278,152.00 US</h1>
+        <h1 class="hidden" id="balancetwo">**** **** **** US</h1>
+        <!-- <p>Available Balance</p> -->
+        <button class="add-contact">
+          <i class="fa-solid fa-eye-slash"></i>
+        </button>
+      </div>
+      <div class="buttons">
+        <button class="send-btn sendmainbtn">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <button class="request-btn">
+          <i class="fa-solid fa-share"></i>
+        </button>
+      </div>
+      <h3>Recent</h3>
+      <div class="transactions" id="transactions">
+        <div class="transaction">
+          <span>@suciani7307</span><span>-9534.00 US</span>
+        </div>
+        <div class="transaction">
+          <span>@luwak399</span><span>-5484.00 US</span>
+        </div>
+        <div class="transaction">
+          <span>@edysantos</span><span>-79544.00 US</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ლოდერი -->
+    <div class="hidden" id="loader"></div>
+
+    <!-- გადარიცხვის გვერდი -->
+    <div id="send-money-page" class="send-money-wrapper hidden">
+      <h2>Send US</h2>
+      <div class="send-money-box">
+        <label for="recipient">Recipient Username</label>
+        <input
+          type="text"
+          class="useerwrap"
+          id="recipient"
+          placeholder="Enter username" />
+
+        <label for="amount">Amount</label>
+        <input
+          type="number"
+          class="numberwrap"
+          id="amount"
+          placeholder="Enter amount" />
+        <p class="error hidden">Insufficient funds on the balance</p>
+        <div class="btnbtn-wrapper">
+          <button class="send-btn send-btn-btn">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <button class="back-btn">
+            <i class="fa-solid fa-rotate-left"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- წარმატების გვერდი -->
+    <div id="success-page" class="success-wrapper hidden">
+      <div id="success-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+      <h2 class="paymanttxt">Transaction Completed!</h2>
+      <p paymanttxt>Your request has been processed!</p>
+      <p paymanttxt>Amount Processed</p>
+      <h1 id="success-amount">Rp76.000</h1>
+      <p>To: <span id="success-recipient"></span></p>
+      <p class="moneygun">Money Gun = 1555000.00</p>
+      <p class="galaxy">Galaxy = 3777000.00</p>
+      <button class="back-btn newtransaction-btn">
+        <i class="fa-solid fa-house"></i>
+      </button>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/1272a139a6.js"
+      crossorigin="anonymous"></script>
+    <script src="app.js" defer=""></script>
+  </body>
+</html>
